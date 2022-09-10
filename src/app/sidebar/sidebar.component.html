@@ -1,0 +1,44 @@
+<!-- Sidebar -->
+<ul
+  class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+  id="accordionSidebar"
+>
+  <!-- Sidebar - Brand -->
+  <a
+    class="sidebar-brand d-flex align-items-center justify-content-center"
+    href="index.html"
+  >
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-laugh-wink"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3 text-left" style="color:white">
+      Projects
+
+      <button class="btn btn-secondary text-end" style="color:white">+</button>
+    </div>
+  </a>
+
+  <!-- Dynamic Nav Menu -->
+
+  <li *ngFor="let menu of sidebarMenuArray; let i = index" class="nav-item">
+    <a class="nav-link collapsed" href="{{ menu.href }}">
+      <img
+        src="{{ menu.tumbnail }}"
+        class="img-fluid img-thumbnail rounded"
+        alt="30"
+        width="30"
+      />
+      <span>{{ menu.tittle }}</span>
+    </a>
+  </li>
+
+  <!-- end Dynamic Nav Menu-->
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline">
+    <a href="/allprojects" class="sidebar-brand-text mx-3" style="color:white"
+      >View all projects</a
+    >
+  </div>
+</ul>
+<!-- End of Sidebar -->
